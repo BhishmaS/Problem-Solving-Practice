@@ -26,6 +26,12 @@ namespace Learning.DataStructures
             int x = str[2] - '0';
             str += '2';
 
+            str.All(s => char.IsUpper(s));
+            str.Substring(5, 10).All(s => char.IsUpper(s));
+
+            var split = str.Split(" ");
+            var len = split.Length;
+
             StringBuilder validString = new StringBuilder("");
             //validString.Remove()
 

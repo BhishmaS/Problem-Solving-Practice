@@ -15,6 +15,8 @@ namespace Learning.DataStructures
             stack.Push("four");
             stack.Push("five");
 
+            var len = stack.Count;
+
             // A stack can be enumerated without disturbing its contents.
             foreach (string number in stack)
             {

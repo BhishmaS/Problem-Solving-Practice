@@ -14,6 +14,8 @@ namespace Learning.DataStructures
             array.Where(e => e == 10).ToArray();
             Array.Find(array, e => e == 10);
             Array.FindAll(array, e => e != 10);
+            Array.FindIndex(array, a => a > 10);
+            Array.IndexOf(array, 10);
             Array.ForEach(array, e =>
             { 
 
@@ -31,12 +33,20 @@ namespace Learning.DataStructures
             array.All(e => e > 10);
             array.Min();
             array.ToList().GetRange(0, 20).Min();
+            array.Sum();
+
+            Array.IndexOf(array, 1);
 
             Array.Exists(array, element => element == 10);
             Array.Sort(array);
+            array.Reverse();
+
+            var newArray = array[12..20];
 
             int max = array.Max(a => a);
+            int count = array.Count((a) => a == 0);
 
+            var ele = list[1];
             list.Insert(0, 1);
             list.Find(e => e == 10);
             list.FindAll(e => e == 10);
@@ -50,9 +60,30 @@ namespace Learning.DataStructures
             list.TakeWhile(e => e > 10);
             list.RemoveRange(0, 10);
             list.Sum();
+            list.IndexOf(1);
+            list.Remove(1);
 
             list.Min();
+            list.Min(l => l < 2);
+            list.Find(l => l < 2);
+            list.ForEach(l =>
+            {
+
+            });
+
+            list.Sort(Compare);
+
+            foreach(var i in list.Where(i => i == 10))
+            {
+                
+            } 
+
             //SortedList
+        }
+
+        public int Compare(int x, int y)
+        {
+            return y - x;
         }
     }
 
@@ -83,6 +114,9 @@ namespace Learning.DataStructures
             int max = arr.Max(a => a[2]);
             arr.Any(a => a[0] == 1);
             arr.SingleOrDefault(a => a[0] == 1);
+            var fristIndexElems = arr.Select(a => a[0]).ToList();
+
+
             int[][] test = arr.Where(a => a[0] == 1).ToArray();
             if (test.Length > 0)
             {

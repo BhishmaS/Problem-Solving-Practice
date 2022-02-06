@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Learning.Utils
 {
-    class Random
+    public class RandomGen
     {
+        public static void Test()
+        {
+            var random = new Random();
+
+            random.Next();
+        }
     }
 }

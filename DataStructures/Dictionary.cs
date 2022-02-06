@@ -27,6 +27,10 @@ namespace Learning.DataStructures
             var nodes = new List<int>();
             nodes.Sort();
 
+            dict.ContainsKey(1);
+            dict.ContainsValue(2);
+
+            dict.Sum(d => d.Value);
 
             ////---------------------------------------------------------
 
