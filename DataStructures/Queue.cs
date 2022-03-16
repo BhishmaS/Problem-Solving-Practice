@@ -28,6 +28,8 @@ namespace Learning.DataStructures
 
 
             int elementsCount = queue.Count;
+
+            var queue1 = new Queue<(string, string)>();
         }
     }
 }

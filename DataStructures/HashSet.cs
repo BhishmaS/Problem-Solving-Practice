@@ -25,6 +25,9 @@ namespace Learning.DataStructures
 
             HashSet<int> numbers = new HashSet<int>(evenNumbers);
             numbers.UnionWith(oddNumbers);
+            numbers.Contains(1);
+
+            var c = numbers.Count;
 
             numbers.Any(n => n > 2);
 

@@ -18,5 +18,7 @@ namespace Learning.Utils
         int min = int.MinValue;
 
         long longMin = long.MinValue;
+
+        int max = Math.Max(1, 2);
     }
 }

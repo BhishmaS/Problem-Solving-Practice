@@ -36,6 +36,11 @@ namespace Learning.MySamples
                 { 13, 14,  15 },
             };
 
+            lock(matrix)
+            {
+
+            }
+
             int totalIterations = matrix.GetLength(0) + matrix.GetLength(1) - 1;
             for(int i=0; i < totalIterations; i++)
             {

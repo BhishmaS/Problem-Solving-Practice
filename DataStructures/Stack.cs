@@ -25,6 +25,9 @@ namespace Learning.DataStructures
 
             stack.Pop();
 
+            stack.Peek();
+            stack.Count();
+
             string outResult;
             stack.TryPop(out outResult);
 

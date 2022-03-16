@@ -8,6 +8,7 @@ namespace Learning.DataStructures
         {
             var queue = new PriorityQueue<string, int>();
             var queue1 = new PriorityQueue<string, int>(new QueueComparer());
+            // var queue2 = new PriorityQueue<int>(); -- should contain 2 arguments
 
             queue.Enqueue("Item A", 0);
             queue.Enqueue("Item B", 60);
@@ -25,14 +26,16 @@ namespace Learning.DataStructures
 
             }
 
-        }
-    }
+            
 
-    public class QueueComparer : IComparer<int>
-    {
-        public int Compare(int x, int y)
+        }
+
+        public class QueueComparer : IComparer<int>
         {
-            return x > y ? -1 : 1;
+            public int Compare(int x, int y)
+            {
+                return x > y ? -1 : 1;
+            }
         }
     }
 }

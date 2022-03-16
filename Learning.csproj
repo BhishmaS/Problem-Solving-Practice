@@ -5,4 +5,12 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Notes\Notes" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Notes\Notes" />
+  </ItemGroup>
+
 </Project>

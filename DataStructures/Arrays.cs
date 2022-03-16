@@ -34,6 +34,9 @@ namespace Learning.DataStructures
             array.Min();
             array.ToList().GetRange(0, 20).Min();
             array.Sum();
+            //Array.Copy();
+
+            array.Select((e, i) => new { ele = e, index = i }).Where(a => a.ele == 10).Select(e => e.index).ToList();
 
             Array.IndexOf(array, 1);
 
@@ -72,11 +75,15 @@ namespace Learning.DataStructures
             });
 
             list.Sort(Compare);
+            list.RemoveAt(list.Count - 1);
 
             foreach(var i in list.Where(i => i == 10))
             {
                 
-            } 
+            }
+
+            var listOfList = new List<List<int>>();
+            listOfList = listOfList.Concat(new List<List<int>>()).ToList();
 
             //SortedList
         }
@@ -84,6 +91,11 @@ namespace Learning.DataStructures
         public int Compare(int x, int y)
         {
             return y - x;
+        }
+
+        public IList<IList<int>> ListReturn()
+        {
+            return new List<IList<int>>();
         }
     }
 
@@ -127,6 +139,8 @@ namespace Learning.DataStructures
             {
 
             }
+
+            Array.Sort(arr, (a, b) => Comparer<int>.Default.Compare(a[0], b[0]));
         }
 
         static void MainTest()

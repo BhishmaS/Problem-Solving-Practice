@@ -19,8 +19,8 @@ namespace Learning.DataStructures
             str.Substring(5, 10);
             str.Remove(2, 1);
             str.Replace('a', 'b');
-            string newStr = str.Reverse().ToString();
-            string.Join("", str.Reverse());
+            // string newStr = str.Reverse().ToString(); -- not working ("System.Linq.Enumerable+ReverseIterator`1[System.Char]")
+            string.Join("", str.Reverse()); // string
             str.Insert(0, "test");
 
             int x = str[2] - '0';
@@ -31,6 +31,7 @@ namespace Learning.DataStructures
 
             var split = str.Split(" ");
             var len = split.Length;
+            var intNum = int.Parse("1");
 
             StringBuilder validString = new StringBuilder("");
             //validString.Remove()
@@ -56,7 +57,7 @@ namespace Learning.DataStructures
             {
                 sb.Append(i.ToString());
             }
-            Console.WriteLine(sb);  // displays 0123456789
+            Console.WriteLine(sb.ToString());  // displays 0123456789
             // Copy one character of the string (not possible with a System.String)
             sb[0] = sb[9];
             Console.WriteLine(sb);  // displays 9123456789
