@@ -29,12 +29,17 @@ namespace Learning.DataStructures
 
             dict.ContainsKey(1);
             dict.ContainsValue(2);
+            dict.Remove(1);
+
+            int x = dict[1]++;
 
             dict.Sum(d => d.Value);
             var dictItem = dict.SingleOrDefault(d => d.Value != 0);
             var k = dictItem.Key;
 
             int maxVal = dict.Max(d => d.Value);
+
+            dict.OrderBy(d => d.Key).ThenBy(d => d.Value).Take(3).Select(d => d.Key);
 
             ////---------------------------------------------------------
 

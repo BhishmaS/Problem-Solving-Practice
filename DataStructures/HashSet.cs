@@ -26,6 +26,12 @@ namespace Learning.DataStructures
             HashSet<int> numbers = new HashSet<int>(evenNumbers);
             numbers.UnionWith(oddNumbers);
             numbers.Contains(1);
+            numbers.First(n => n == 1);
+            //numbers.RemoveWhere();
+
+            var newSet = evenNumbers.Except(oddNumbers);
+
+            var intersection = evenNumbers.Intersect(oddNumbers);
 
             var c = numbers.Count;
 

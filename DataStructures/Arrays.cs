@@ -35,6 +35,7 @@ namespace Learning.DataStructures
             array.ToList().GetRange(0, 20).Min();
             array.Sum();
             //Array.Copy();
+            array.Except(array);
 
             array.Select((e, i) => new { ele = e, index = i }).Where(a => a.ele == 10).Select(e => e.index).ToList();
 
@@ -65,6 +66,7 @@ namespace Learning.DataStructures
             list.Sum();
             list.IndexOf(1);
             list.Remove(1);
+            list.Reverse(); // returns void
 
             list.Min();
             list.Min(l => l < 2);
@@ -123,6 +125,7 @@ namespace Learning.DataStructures
                 }
             }
 
+            Array.Sort(arr);
             int max = arr.Max(a => a[2]);
             arr.Any(a => a[0] == 1);
             arr.SingleOrDefault(a => a[0] == 1);
@@ -130,6 +133,7 @@ namespace Learning.DataStructures
 
 
             int[][] test = arr.Where(a => a[0] == 1).ToArray();
+            int len = test.GetLength(0);
             if (test.Length > 0)
             {
 
@@ -140,7 +144,15 @@ namespace Learning.DataStructures
 
             }
 
-            Array.Sort(arr, (a, b) => Comparer<int>.Default.Compare(a[0], b[0]));
+            Array.Sort(arr, (a, b) => Comparer<int>.Create(Compare).Compare(a[0], b[0]));
+
+
+
+        }
+
+        static int Compare(int x, int y)
+        {
+            return y - x;
         }
 
         static void MainTest()

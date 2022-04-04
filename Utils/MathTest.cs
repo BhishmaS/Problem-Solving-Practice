@@ -20,5 +20,9 @@ namespace Learning.Utils
         long longMin = long.MinValue;
 
         int max = Math.Max(1, 2);
+
+        int abs = Math.Abs(-1);
+
+        double x = Math.Pow(2, 2);
     }
 }

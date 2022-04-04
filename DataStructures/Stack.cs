@@ -28,6 +28,8 @@ namespace Learning.DataStructures
             stack.Peek();
             stack.Count();
 
+            stack.Reverse();
+
             string outResult;
             stack.TryPop(out outResult);
 
