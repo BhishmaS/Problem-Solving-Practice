@@ -58,7 +58,7 @@ namespace Learning.DataStructures
                 sb.Append(i.ToString());
             }
 
-            sb.ToString().Reverse();
+            sb.ToString().Reverse().ToString();
 
             Console.WriteLine(sb.ToString());  // displays 0123456789
             // Copy one character of the string (not possible with a System.String)

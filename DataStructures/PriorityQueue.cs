@@ -21,13 +21,13 @@ namespace Learning.DataStructures
                 var curr = queue.Dequeue();
             }
 
-            while(queue.Count == 0)
+            while (queue.Count == 0)
             {
 
             }
 
-            
 
+            queue.Peek();
         }
 
         public class QueueComparer : IComparer<int>

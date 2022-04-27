@@ -27,8 +27,12 @@ namespace Learning.DataStructures
             array.Select(e => e).ToArray();
             array.Take(5).ToArray();
             array.TakeWhile(e => e > 10);
-            array.OrderBy(e => e).ThenBy(e => e)
-                .OrderByDescending(e => e).ThenByDescending(e => e);
+            array
+                .OrderBy(e => e)
+                .ThenBy(e => e)
+                .OrderByDescending(e => e)
+                .ThenByDescending(e => e);
+
             array.Any(e => e > 10);
             array.All(e => e > 10);
             array.Min();
@@ -75,6 +79,11 @@ namespace Learning.DataStructures
             {
 
             });
+
+            // Replace item in list
+            int index = list.FindIndex(l => l == 2);
+            if (index != -1)
+                list[index] = 10;
 
             list.Sort(Compare);
             list.RemoveAt(list.Count - 1);

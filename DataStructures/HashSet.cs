@@ -38,6 +38,11 @@ namespace Learning.DataStructures
             numbers.Any(n => n > 2);
 
             DisplaySet(numbers);
+
+            // Set Array
+            var setArray = new HashSet<int>[9];
+
+            var set = new HashSet<int>(9);
         }
 
         public void DisplaySet(HashSet<int> collection)
