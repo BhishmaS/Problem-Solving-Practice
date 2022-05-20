@@ -4,12 +4,11 @@ using System.Linq;
 
 namespace Learning.DataStructures
 {
-    public class Arrays
+    public class ArraysDemo
     {
-        int[] array = new int[10];
-        List<int> list = new();
+        static int[] array = new int[10];
 
-        public void Test()
+        public static void Test()
         {
             array.Where(e => e == 10).ToArray();
             Array.Find(array, e => e == 10);
@@ -38,8 +37,10 @@ namespace Learning.DataStructures
             array.Min();
             array.ToList().GetRange(0, 20).Min();
             array.Sum();
+            array.Aggregate(0, (sum, i) => sum + i);
             //Array.Copy();
             array.Except(array);
+            var hashSet = array.ToHashSet();
 
             array.Select((e, i) => new { ele = e, index = i }).Where(a => a.ele == 10).Select(e => e.index).ToList();
 
@@ -47,66 +48,12 @@ namespace Learning.DataStructures
 
             Array.Exists(array, element => element == 10);
             Array.Sort(array);
-            array.Reverse();
+            var res = array.Reverse();
 
             var newArray = array[12..20];
 
             int max = array.Max(a => a);
             int count = array.Count((a) => a == 0);
-
-            var ele = list[1];
-            list.Insert(0, 1);
-            list.Find(e => e == 10);
-            list.FindAll(e => e == 10);
-            list.Select(e =>
-            {
-                return new { e };
-            });
-            list.FirstOrDefault();
-            list.SingleOrDefault();
-            list.Select(e => e).ToList();
-            list.TakeWhile(e => e > 10);
-            list.RemoveRange(0, 10);
-            list.Sum();
-            list.IndexOf(1);
-            list.Remove(1);
-            list.Reverse(); // returns void
-
-            list.Min();
-            list.Min(l => l < 2);
-            list.Find(l => l < 2);
-            list.ForEach(l =>
-            {
-
-            });
-
-            // Replace item in list
-            int index = list.FindIndex(l => l == 2);
-            if (index != -1)
-                list[index] = 10;
-
-            list.Sort(Compare);
-            list.RemoveAt(list.Count - 1);
-
-            foreach(var i in list.Where(i => i == 10))
-            {
-                
-            }
-
-            var listOfList = new List<List<int>>();
-            listOfList = listOfList.Concat(new List<List<int>>()).ToList();
-
-            //SortedList
-        }
-
-        public int Compare(int x, int y)
-        {
-            return y - x;
-        }
-
-        public IList<IList<int>> ListReturn()
-        {
-            return new List<IList<int>>();
         }
     }
 
@@ -114,6 +61,7 @@ namespace Learning.DataStructures
     {
         static void Print2DArray(int[,] arr)
         {
+            Array.Sort(arr);
             // Display the array elements.
             for (int i = 0; i < arr.GetLength(0); i++)
             {
@@ -122,7 +70,10 @@ namespace Learning.DataStructures
                     System.Console.WriteLine("Element({0},{1})={2}", i, j, arr[i, j]);
                 }
             }
+
+            //arr.All();
         }
+
         static void PrintJaggedArray(int[][] arr)
         {
             // Display the array elements.
@@ -134,7 +85,6 @@ namespace Learning.DataStructures
                 }
             }
 
-            Array.Sort(arr);
             int max = arr.Max(a => a[2]);
             arr.Any(a => a[0] == 1);
             arr.SingleOrDefault(a => a[0] == 1);
@@ -154,8 +104,7 @@ namespace Learning.DataStructures
             }
 
             Array.Sort(arr, (a, b) => Comparer<int>.Create(Compare).Compare(a[0], b[0]));
-
-
+            Array.Sort(arr, (a, b) => Comparer<int>.Create((x, y) => y - x).Compare(a[0], b[0]));
 
         }
 

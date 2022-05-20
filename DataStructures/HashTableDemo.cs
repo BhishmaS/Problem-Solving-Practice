@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace Learning.DataStructures
 {
-    class HashTable
+    class HashTableDemo
     {
 		static public void Test()
 		{

@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 
 namespace Learning.DataStructures
 {
-    class Strings
+    class StringsDemo
     {
-        public void Test()
+        public static void Test()
         {
             string stringO = new string(new char[] { 'a', 'b' });
             string stringO1 = new string("ab");
@@ -23,8 +24,14 @@ namespace Learning.DataStructures
             string.Join("", str.Reverse()); // string
             str.Insert(0, "test");
 
+            var charArray = str.ToCharArray();
+            Array.Sort(charArray);
+            var sortedString = new string(charArray);
+
             int x = str[2] - '0';
             str += '2';
+
+            var hash = str.GetHashCode();
 
             str.All(s => char.IsUpper(s));
             str.Substring(5, 10).All(s => char.IsUpper(s));
@@ -35,6 +42,10 @@ namespace Learning.DataStructures
 
             StringBuilder validString = new StringBuilder("");
             //validString.Remove()
+
+            StringBuilder string1 = new StringBuilder(123);
+            //string1.SubString();
+
 
             str.Contains('a');
             char c = 'a';
@@ -58,6 +69,9 @@ namespace Learning.DataStructures
                 sb.Append(i.ToString());
             }
 
+            sb.Remove(1, 1);
+            int.Parse(sb.ToString());
+
             sb.ToString().Reverse().ToString();
 
             Console.WriteLine(sb.ToString());  // displays 0123456789
@@ -65,6 +79,11 @@ namespace Learning.DataStructures
             sb[0] = sb[9];
             Console.WriteLine(sb);  // displays 9123456789
             Console.WriteLine();
+
+            int sbLen = sb.Length;
+
+            //double d = "123456";
+            //d.ToString("G", CultureInfo.InvariantCulture);
         }
     }
 }

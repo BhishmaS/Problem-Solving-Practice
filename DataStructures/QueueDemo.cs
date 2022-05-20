@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Learning.DataStructures
 {
-    public class Queue
+    public class QueueDemo
     {
-        public void Test()
+        public static void Test()
         {
             Queue<string> queue = new Queue<string>();
             queue.Enqueue("one");
@@ -30,6 +30,13 @@ namespace Learning.DataStructures
             int elementsCount = queue.Count;
 
             var queue1 = new Queue<(string, string)>();
+            queue1.Enqueue(("abc", "abc"));
+
+            var item = queue1.Dequeue();
+            var item1 = item.Item1;
+
+
+            //Queue<string> queue2 = new LinkedList<string>();
         }
     }
 }

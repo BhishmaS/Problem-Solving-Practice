@@ -24,6 +24,7 @@ If must solve in-place then
   - Store one or more different values in the same pointer
 
 If asked for maximum/minumum subarray/subset/options then
+  - Greedy
   - Dynamic programming
 
 If asked for top/least K items then

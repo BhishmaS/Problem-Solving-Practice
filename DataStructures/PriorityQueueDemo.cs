@@ -2,7 +2,7 @@
 
 namespace Learning.DataStructures
 {
-    public class PriorityQueueTest
+    public class PriorityQueueDemo
     {
         public static void Test()
         {

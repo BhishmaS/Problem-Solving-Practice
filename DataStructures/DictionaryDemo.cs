@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Learning.DataStructures
 {
-    public class Dictionary
+    public class DictionaryDemo
     {
         public static void Test()
         {
@@ -30,6 +30,7 @@ namespace Learning.DataStructures
             dict.ContainsKey(1);
             dict.ContainsValue(2);
             dict.Remove(1);
+            dict.All(d => d.Value == 0);
 
             int x = dict[1]++;
 
@@ -58,9 +59,14 @@ namespace Learning.DataStructures
             }
 
             sortedDictionary.Any(d => d.Value > 0);
+
+            ////--------------------------------------------------------- Key Value Pair
+            var keyValue = new KeyValuePair<int, int>(1, 2);
+            //keyValue.Key = 0; read onlyyyyyyyyyyyyyy
+
         }
 
-        public IList<IList<int>> VerticalTraversal()
+        public static IList<IList<int>> VerticalTraversal()
         {
             var resultDict = new Dictionary<int, Dictionary<int, int>>();
             var resultList = resultDict.OrderBy(r => r.Key)

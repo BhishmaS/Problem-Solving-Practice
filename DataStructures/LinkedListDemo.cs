@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Learning.DataStructures
 {
-    public class LinkedListTest
+    public class LinkedListDemo
     {
         public static void Test()
         {
@@ -24,6 +24,8 @@ namespace Learning.DataStructures
             var listItem = new KeyValuePair<int, int>(1, 2);
             list1.AddLast(listItem);
             list1.Remove(listItem);
+
+            var normalList = list.ToList();
         }
     }
 }

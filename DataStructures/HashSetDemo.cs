@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Learning.DataStructures
 {
-    public class HashSet
+    public class HashSetDemo
     {
-        public void Test()
+        public static void Test()
         {
             HashSet<int> evenNumbers = new HashSet<int>();
             HashSet<int> oddNumbers = new HashSet<int>();
@@ -45,7 +43,7 @@ namespace Learning.DataStructures
             var set = new HashSet<int>(9);
         }
 
-        public void DisplaySet(HashSet<int> collection)
+        public static void DisplaySet(HashSet<int> collection)
         {
             Console.Write("{");
             foreach (int i in collection)

@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Learning.DataStructures
 {
-    class Stack
+    class StackDemo
     {
-        public void Test()
+        public static void Test()
         {
             Stack<string> stack = new Stack<string>();
             stack.Push("one");
