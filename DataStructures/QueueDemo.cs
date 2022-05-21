@@ -35,7 +35,7 @@ namespace Learning.DataStructures
             var item = queue1.Dequeue();
             var item1 = item.Item1;
 
-
+            queue.ToList();
             //Queue<string> queue2 = new LinkedList<string>();
         }
     }

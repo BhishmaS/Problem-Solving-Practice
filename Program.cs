@@ -1,4 +1,5 @@
-﻿using Learning.LeetCode;
+﻿using Learning.DataStructures;
+using Learning.LeetCode;
 using Learning.MySamples;
 using System;
 using static Learning.LeetCode.DeleteDuplicates;
@@ -11,6 +12,8 @@ namespace Learning
 		{
 			char ch = 'A';
 			Console.WriteLine((int)ch);
+
+			ArraysDemo.Test();
 		}
 	}
 }

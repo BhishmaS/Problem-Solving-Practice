@@ -22,10 +22,6 @@ namespace Learning.DataStructures
             var value = dict[1];
 
             dict.TryGetValue(1, out value);
-            
-
-            var nodes = new List<int>();
-            nodes.Sort();
 
             dict.ContainsKey(1);
             dict.ContainsValue(2);

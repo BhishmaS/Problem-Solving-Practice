@@ -13,6 +13,8 @@ namespace Learning.DataStructures
             list.AddLast(listNode);
             list.AddLast(12);
 
+            list.Last(); // O(1)
+
             var nextNode = listNode.Next;
             var prevNode = listNode.Previous;
 

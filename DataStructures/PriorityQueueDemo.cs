@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Learning.DataStructures
 {
@@ -8,7 +9,7 @@ namespace Learning.DataStructures
         {
             var queue = new PriorityQueue<string, int>();
             var queue1 = new PriorityQueue<string, int>(new QueueComparer());
-            // var queue2 = new PriorityQueue<int>(); -- should contain 2 arguments
+            // var queue2 = new PriorityQueue(); -- should contain 2 arguments
 
             queue.Enqueue("Item A", 0);
             queue.Enqueue("Item B", 60);
@@ -26,8 +27,12 @@ namespace Learning.DataStructures
 
             }
 
-
             queue.Peek();
+
+            foreach (var (Element, Priority) in queue.UnorderedItems)
+            {
+                Console.WriteLine(Element + " " + Priority);
+            }
         }
 
         public class QueueComparer : IComparer<int>
