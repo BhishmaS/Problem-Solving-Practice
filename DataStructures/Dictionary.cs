@@ -59,6 +59,7 @@ namespace Learning.DataStructures
 
             ////--------------------------------------------------------- Key Value Pair
             var keyValue = new KeyValuePair<int, int>(1, 2);
+            keyValue = new KeyValuePair<int, int>(1, 2);
             //keyValue.Key = 0; read onlyyyyyyyyyyyyyy
 
         }
