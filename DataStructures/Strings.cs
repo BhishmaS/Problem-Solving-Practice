@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 
 namespace Learning.DataStructures
 {
-    class StringsDemo
+    public class StringsDemo
     {
         public static void Test()
         {
@@ -39,6 +38,8 @@ namespace Learning.DataStructures
             var split = str.Split(" ");
             var len = split.Length;
             var intNum = int.Parse("1");
+
+            var dict = str.ToDictionary(c => c, c => 1);
 
             StringBuilder validString = new StringBuilder("");
             //validString.Remove()

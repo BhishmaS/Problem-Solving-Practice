@@ -41,6 +41,8 @@ namespace Learning.DataStructures
             var setArray = new HashSet<int>[9];
 
             var set = new HashSet<int>(9);
+            var arr = set.OrderByDescending(s => s).ToArray();
+            //set.Sort();            //set.Sort();
         }
 
         public static void DisplaySet(HashSet<int> collection)

@@ -19,7 +19,7 @@ namespace Learning.DataStructures
             { 
 
             });
-            array.Prepend(16);
+            _ = array.Prepend(16);
 
             array.FirstOrDefault();
             array.SingleOrDefault();
@@ -103,9 +103,10 @@ namespace Learning.DataStructures
 
             }
 
+            Array.Sort(arr);
             Array.Sort(arr, (a, b) => Comparer<int>.Create(Compare).Compare(a[0], b[0]));
             Array.Sort(arr, (a, b) => Comparer<int>.Create((x, y) => y - x).Compare(a[0], b[0]));
-
+            var arr1 = arr.Skip(1);
         }
 
         static int Compare(int x, int y)

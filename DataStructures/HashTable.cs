@@ -4,7 +4,7 @@ using System.Collections;
 namespace Learning.DataStructures
 {
     class HashTableDemo
-    {
+	{
 		static public void Test()
 		{
 			// Create a hashtable

@@ -27,6 +27,7 @@ namespace Learning.DataStructures
             dict.ContainsValue(2);
             dict.Remove(1);
             dict.All(d => d.Value == 0);
+            dict.Skip(1);
 
             int x = dict[1]++;
 
