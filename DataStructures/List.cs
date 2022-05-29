@@ -28,6 +28,7 @@ namespace Learning.DataStructures
             list.Remove(1);
             list.RemoveAt(1);
             list.Reverse(); // returns void
+            list.Add(1); // void
 
             list.Min();
             list.Min(l => l < 2);
@@ -49,6 +50,8 @@ namespace Learning.DataStructures
             {
 
             }
+
+            var list2 = new List<int>(list);
 
             var listOfList = new List<List<int>>();
             listOfList = listOfList.Concat(new List<List<int>>()).ToList();

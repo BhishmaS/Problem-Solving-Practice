@@ -37,3 +37,16 @@ If asked for common strings then
 Else
   - Map/Set for O(1) time & O(n) space
   - Sort input for O(nlogn) time and O(1) space
+
+  -----------------------------------------------------------------
+
+ ## Sliding Sindow
+	- for() { while() }
+	- single prefix sum, all prefixes sums in array
+	- max or min find
+
+## Tree
+	- Inorder, preorder, postorder (Recursive, iterative)
+	- DFS, BFS
+	- going to the left leaf end or right leaf end and traversing total tree based on the problem
+

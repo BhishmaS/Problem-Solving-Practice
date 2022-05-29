@@ -35,9 +35,10 @@ namespace Learning.DataStructures
             str.All(s => char.IsUpper(s));
             str.Substring(5, 10).All(s => char.IsUpper(s));
 
-            var split = str.Split(" ");
+            var split = str.Split(' ');
             var len = split.Length;
             var intNum = int.Parse("1");
+            var n = char.GetNumericValue('1');
 
             var dict = str.ToDictionary(c => c, c => 1);
 
@@ -85,6 +86,10 @@ namespace Learning.DataStructures
 
             //double d = "123456";
             //d.ToString("G", CultureInfo.InvariantCulture);
+
+            string.Compare(str, "aaBBc", StringComparison.InvariantCulture);
+            string.Compare(str, "aaBBc");
+            string.Compare("a", "A", StringComparison.Ordinal);
         }
     }
 }
