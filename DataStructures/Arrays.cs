@@ -54,6 +54,8 @@ namespace Learning.DataStructures
 
             int max = array.Max(a => a);
             int count = array.Count((a) => a == 0);
+
+            _ = array['a'];
         }
     }
 
