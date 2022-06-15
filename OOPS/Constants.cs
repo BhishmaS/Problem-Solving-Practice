@@ -8,6 +8,6 @@ namespace Learning.OOPS
 {
     public static class Constants
     {
-
+        public const string Const1 = "const_test";
     }
 }

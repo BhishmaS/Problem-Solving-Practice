@@ -1,5 +1,6 @@
 ﻿using Learning.Algorithms;
 using Learning.DataStructures;
+using Learning.OOPS;
 using System;
 using System.Linq;
 
@@ -9,9 +10,7 @@ namespace Learning
 	{
 		public static void Main(string[] args)
 		{
-			BitManipulation.Test();
 
-			//// Work on this
-        }
+		}
 	}
 }
