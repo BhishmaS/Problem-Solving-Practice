@@ -48,8 +48,9 @@ namespace Learning.DataStructures
 
             Array.Exists(array, element => element == 10);
             Array.Sort(array);
-            var res = array.Reverse();
+            Array.BinarySearch(array, 2);
 
+            var res = array.Reverse();
             var newArray = array[12..20];
 
             int max = array.Max(a => a);

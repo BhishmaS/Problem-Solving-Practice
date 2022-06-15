@@ -42,6 +42,8 @@ namespace Learning.DataStructures
 
             var dict = str.ToDictionary(c => c, c => 1);
 
+            //var newStr = string.Copy(str);
+
             StringBuilder validString = new StringBuilder("");
             //validString.Remove()
 
@@ -71,8 +73,12 @@ namespace Learning.DataStructures
                 sb.Append(i.ToString());
             }
 
+            char.IsNumber('2');
+            char.IsLower('a');
+
             sb.Remove(1, 1);
             int.Parse(sb.ToString());
+            sb.Insert(1, "aa");
 
             sb.ToString().Reverse().ToString();
 

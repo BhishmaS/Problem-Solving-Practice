@@ -39,24 +39,6 @@ namespace Learning.DataStructures
 
             dict.OrderBy(d => d.Key).ThenBy(d => d.Value).Take(3).Select(d => d.Key);
 
-            ////---------------------------------------------------------
-
-            var sortedDictionary = new SortedDictionary<int, int>();
-            sortedDictionary.Add(1, 16);
-
-            sortedDictionary.TryGetValue(1, out value);
-            sortedDictionary[1] += 1;
-
-            value = sortedDictionary.First().Value;
-
-            foreach (var item in sortedDictionary)
-            {
-                var key = item.Key;
-                var itemValue = item.Value;
-            }
-
-            sortedDictionary.Any(d => d.Value > 0);
-
             ////--------------------------------------------------------- Key Value Pair
             var keyValue = new KeyValuePair<int, int>(1, 2);
             keyValue = new KeyValuePair<int, int>(1, 2);

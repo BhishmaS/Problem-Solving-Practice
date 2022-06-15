@@ -8,7 +8,7 @@ namespace Learning.DataStructures
     {
         public static void Test()
         {
-            HashSet<int> evenNumbers = new HashSet<int>();
+            HashSet<int> evenNumbers = new HashSet<int> { 2, 6 };
             HashSet<int> oddNumbers = new HashSet<int>();
 
             for (int i = 0; i < 5; i++)
@@ -25,6 +25,7 @@ namespace Learning.DataStructures
             numbers.UnionWith(oddNumbers);
             numbers.Contains(1);
             numbers.First(n => n == 1);
+            //numbers.re
             //numbers.RemoveWhere();
 
             var newSet = evenNumbers.Except(oddNumbers);
@@ -42,7 +43,7 @@ namespace Learning.DataStructures
 
             var set = new HashSet<int>(9);
             var arr = set.OrderByDescending(s => s).ToArray();
-            //set.Sort();            //set.Sort();
+            
         }
 
         public static void DisplaySet(HashSet<int> collection)
