@@ -9,6 +9,8 @@ namespace Learning.DataStructures
             var tuple = new Tuple<int, int>(1, 2);
             var tuple1 = new Tuple<int, int, int>(1, 2, 3);
 
+            var item1 = tuple.Item1;
+            var valueTuple = tuple.ToValueTuple();
         }
     }
 }
