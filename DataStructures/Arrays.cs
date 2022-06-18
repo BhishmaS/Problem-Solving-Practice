@@ -19,6 +19,8 @@ namespace Learning.DataStructures
             { 
 
             });
+            Array.Fill(array, -1);
+
             _ = array.Prepend(16);
 
             array.FirstOrDefault();
@@ -37,6 +39,7 @@ namespace Learning.DataStructures
             array.Min();
             array.ToList().GetRange(0, 20).Min();
             array.Sum();
+            array.Count(a => a == -1);
             array.Aggregate(0, (sum, i) => sum + i);
             //Array.Copy();
             array.Except(array);

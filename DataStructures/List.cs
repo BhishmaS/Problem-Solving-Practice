@@ -43,7 +43,7 @@ namespace Learning.DataStructures
             if (index != -1)
                 list[index] = 10;
 
-            list.Sort(Compare);
+            list.Sort((a, b) => b - a);
             list.RemoveAt(list.Count - 1);
 
             foreach (var i in list.Where(i => i == 10))
