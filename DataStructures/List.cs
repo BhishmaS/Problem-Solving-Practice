@@ -52,6 +52,7 @@ namespace Learning.DataStructures
             }
 
             var list2 = new List<int>(list);
+            var list3 = new List<int>(3);
 
             var listOfList = new List<List<int>>();
             listOfList = listOfList.Concat(new List<List<int>>()).ToList();

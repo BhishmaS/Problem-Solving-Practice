@@ -1,4 +1,32 @@
-﻿If an input array is sorted then
+﻿## Sliding Window
+	- for() { while() }
+	- single prefix sum, all prefixes sums in array
+	- max or min find
+
+## Tree
+	- Inorder, preorder, postorder (Recursive, iterative)
+	- DFS, BFS
+	- going to the left leaf end or right leaf end and traversing total tree based on the problem
+
+## Two Pointer
+	- Ignoring extra space
+	- May be sliding window, may be binary search
+	- Searching pairs...
+
+## Bit Manipulation
+	- Magical reduction of time complexity
+	- Rolling hash
+
+## Graph
+	- Union Find (For regions)
+	- 
+
+
+
+-----------------------------------------------------------------
+### For Reference:
+
+If an input array is sorted then
   - Binary search
   - Two pointers
 
@@ -37,16 +65,3 @@ If asked for common strings then
 Else
   - Map/Set for O(1) time & O(n) space
   - Sort input for O(nlogn) time and O(1) space
-
-  -----------------------------------------------------------------
-
- ## Sliding Sindow
-	- for() { while() }
-	- single prefix sum, all prefixes sums in array
-	- max or min find
-
-## Tree
-	- Inorder, preorder, postorder (Recursive, iterative)
-	- DFS, BFS
-	- going to the left leaf end or right leaf end and traversing total tree based on the problem
-
