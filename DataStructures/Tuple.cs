@@ -11,6 +11,9 @@ namespace Learning.DataStructures
 
             var item1 = tuple.Item1;
             var valueTuple = tuple.ToValueTuple();
+
+            var normalTuple = (1, 2);
+            var i = normalTuple.Item1;
         }
     }
 }

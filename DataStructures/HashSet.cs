@@ -31,6 +31,10 @@ namespace Learning.DataStructures
             var newSet = evenNumbers.Except(oddNumbers);
 
             var intersection = evenNumbers.Intersect(oddNumbers);
+            evenNumbers.IntersectWith(oddNumbers);
+
+            var unoin = evenNumbers.Union(oddNumbers);
+            evenNumbers.UnionWith(oddNumbers);
 
             var c = numbers.Count;
 
@@ -44,6 +48,10 @@ namespace Learning.DataStructures
             var set = new HashSet<int>(9);
             var arr = set.OrderByDescending(s => s).ToArray();
             
+            if (!set.Add(10))
+            {
+                var boolean = set.Add(10);
+            }
         }
 
         public static void DisplaySet(HashSet<int> collection)
@@ -54,6 +62,30 @@ namespace Learning.DataStructures
                 Console.Write(" {0}", i);
             }
             Console.WriteLine(" }");
+        }
+
+    }
+
+    public class MyHashSet
+    {
+        int[] arr = new int[10];
+
+        public bool Add(int x)
+        {
+            if (this.Contains(x))
+                return false;
+
+            int hashCode = x % 20;
+            arr[hashCode] = x;
+
+            return true;
+        }
+
+        public bool Contains(int x)
+        {
+            int hashCode = x % 20;
+
+            return arr[hashCode] != 0;
         }
 
     }

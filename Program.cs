@@ -1,8 +1,4 @@
-﻿using Learning.Algorithms;
-using Learning.DataStructures;
-using Learning.OOPS;
-using System;
-using System.Linq;
+﻿using System;
 
 namespace Learning
 {
@@ -10,7 +6,6 @@ namespace Learning
 	{
 		public static void Main(string[] args)
 		{
-
-		}
-	}
+        }
+    }
 }

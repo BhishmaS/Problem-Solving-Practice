@@ -5,6 +5,11 @@
         public static void Test()
         {
             var unionFind = new UnionFind();
+            DFS();
+            BFS();
+
+            void DFS() { }
+            void BFS() { }
         }
     }
 
@@ -41,5 +46,10 @@
 
             return this.GetParent(parents, parents[v]);
         }
+    }
+
+    public class TopologicalSort
+    {
+
     }
 }

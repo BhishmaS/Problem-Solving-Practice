@@ -15,7 +15,7 @@ namespace Learning.DataStructures
 
             var dict = new Dictionary<int, int>();
             dict.Add(1, 1);
-            dict.OrderBy(d => d.Key);
+            dict = dict.OrderBy(d => d.Key).ToDictionary(d => d.Key, d => d.Value);
 
             dict.Select(d => d.Value).ToList();
 
@@ -29,6 +29,8 @@ namespace Learning.DataStructures
             dict.All(d => d.Value == 0);
             dict.Skip(1);
             dict.Values.Max();
+
+            dict.GetValueOrDefault(1);
 
             int x = dict[1]++;
 
@@ -45,10 +47,17 @@ namespace Learning.DataStructures
             keyValue = new KeyValuePair<int, int>(1, 2);
             //keyValue.Key = 0; read onlyyyyyyyyyyyyyy
 
+            var dictM = new Dictionary<int[], int[]>();
+            if (dictM.ContainsKey(new int[2] { 1, 2 }))
+            {
+
+            }
+
         }
 
         public static IList<IList<int>> VerticalTraversal()
         {
+
             var resultDict = new Dictionary<int, Dictionary<int, int>>();
             var resultList = resultDict.OrderBy(r => r.Key)
                     .Select(r => (IList<int>)r.Value.Select(d => d.Value).ToList())

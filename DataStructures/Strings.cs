@@ -10,6 +10,8 @@ namespace Learning.DataStructures
         {
             string stringO = new string(new char[] { 'a', 'b' });
             string stringO1 = new string("ab");
+            String strObject = new String("abc"); 
+            var ch = strObject[2];
 
             string str = $"This is interpolation {stringO} {stringO1}";
             str.EndsWith("");
@@ -26,6 +28,7 @@ namespace Learning.DataStructures
             var charArray = str.ToCharArray();
             Array.Sort(charArray);
             var sortedString = new string(charArray);
+            str.Trim();
 
             int x = str[2] - '0';
             str += '2';
@@ -88,6 +91,8 @@ namespace Learning.DataStructures
             Console.WriteLine(sb);  // displays 9123456789
             Console.WriteLine();
 
+            // int sbLen = sb.Length;
+            //// see above line, your mind almost thinks the same while following a similar namming conventions
             int sbLen = sb.Length;
 
             //double d = "123456";

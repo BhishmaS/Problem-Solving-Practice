@@ -54,7 +54,7 @@ namespace Learning.DataStructures
             Array.BinarySearch(array, 2);
 
             var res = array.Reverse();
-            var newArray = array[12..20];
+            var newArray = array[12..20]; // >=12 && < 20
 
             int max = array.Max(a => a);
             int count = array.Count((a) => a == 0);
@@ -77,6 +77,8 @@ namespace Learning.DataStructures
                 }
             }
 
+            var copy = arr.Clone() as int[,];
+
             //arr.All();
         }
 
@@ -96,7 +98,6 @@ namespace Learning.DataStructures
             arr.SingleOrDefault(a => a[0] == 1);
             var fristIndexElems = arr.Select(a => a[0]).ToList();
 
-
             int[][] test = arr.Where(a => a[0] == 1).ToArray();
             int len = test.GetLength(0);
             if (test.Length > 0)
@@ -112,6 +113,8 @@ namespace Learning.DataStructures
             Array.Sort(arr);
             Array.Sort(arr, (a, b) => Comparer<int>.Create(Compare).Compare(a[0], b[0]));
             Array.Sort(arr, (a, b) => Comparer<int>.Create((x, y) => y - x).Compare(a[0], b[0]));
+            Array.Sort(arr, (a, b) => b[1] - a[1]);
+            arr = arr.OrderBy(a => a[0]).ThenBy(a => a[1]).ToArray();
             var arr1 = arr.Skip(1);
         }
 

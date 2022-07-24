@@ -7,10 +7,8 @@ namespace Learning.DataStructures
     {
         public static void Test()
         {
-            var sortedDictionary = new SortedDictionary<int, int>
-            {
-                { 1, 16 }
-            };
+            var sortedDictionary1 = new SortedDictionary<int, int> { { 1, 16 } };
+            var sortedDictionary = new SortedDictionary<int, int>(Comparer<int>.Create((a, b) => a - b));
 
             sortedDictionary.TryGetValue(1, out int value);
             sortedDictionary[1] += 1;
@@ -18,6 +16,10 @@ namespace Learning.DataStructures
             sortedDictionary.Add(1, 16);
 
             value = sortedDictionary.First().Value;
+            if (sortedDictionary.ContainsKey(0))
+            {
+
+            }
 
             foreach (var item in sortedDictionary)
             {

@@ -5,7 +5,7 @@ namespace Learning.MySamples
 {
     public class XMLOperations
     {
-        public static void Main(string[] args)
+        public static void XMLOperation(string[] args)
         {
             var operations = new Dictionary<string, Operation>();
 

@@ -10,9 +10,9 @@ namespace Learning.DataStructures
             var queue = new PriorityQueue<string, int>();
             var queue1 = new PriorityQueue<string, int>(new QueueComparer());
             // OR
-            // var queue1 = new PriorityQueue<string, int>(Comparer<int>.Create((x, y) => x > y ? -1 : 1));
+            var queue2 = new PriorityQueue<string, int>(Comparer<int>.Create((x, y) => x > y ? -1 : 1));
 
-            var queue2 = new PriorityQueue<(int, int), int>();
+            var queue3 = new PriorityQueue<(int, int), int>();
             // var queue2 = new PriorityQueue(); -- should contain 2 arguments
 
             var item = queue2.Dequeue();

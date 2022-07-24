@@ -37,6 +37,7 @@ namespace Learning.DataStructures
             {
 
             });
+            //list.Join(list);
 
             // Replace item in list
             int index = list.FindIndex(l => l == 2);
@@ -57,7 +58,13 @@ namespace Learning.DataStructures
             var listOfList = new List<List<int>>();
             listOfList = listOfList.Concat(new List<List<int>>()).ToList();
 
+            var stringList = new List<string>();
+            stringList.Sort(StringComparer.Ordinal);
+
             //SortedList
+            var list4 = new List<(int x, int y)>(3);
+            int x = list4[0].x;
+            int y = list4[0].y;
         }
 
         private static int Compare(int x, int y)
