@@ -23,6 +23,8 @@ namespace Learning.DataStructures
 
             dict.TryGetValue(1, out value);
 
+            dict.TryAdd(1, 2);
+
             dict.ContainsKey(1);
             dict.ContainsValue(2);
             dict.Remove(1);
@@ -40,7 +42,7 @@ namespace Learning.DataStructures
 
             int maxVal = dict.Max(d => d.Value);
 
-            dict.OrderBy(d => d.Key).ThenBy(d => d.Value).Take(3).Select(d => d.Key);
+            dict.OrderByDescending(d => d.Key).ThenBy(d => d.Value).Take(3).Select(d => d.Key);
 
             ////--------------------------------------------------------- Key Value Pair
             var keyValue = new KeyValuePair<int, int>(1, 2);

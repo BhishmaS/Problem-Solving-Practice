@@ -47,7 +47,8 @@ namespace Learning.DataStructures
 
             var set = new HashSet<int>(9);
             var arr = set.OrderByDescending(s => s).ToArray();
-            
+            set.Clear();
+
             if (!set.Add(10))
             {
                 var boolean = set.Add(10);

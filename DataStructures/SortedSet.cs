@@ -9,12 +9,14 @@ namespace Learning.DataStructures
             var set = new SortedSet<int>();
             set.UnionWith(new SortedSet<int>());
 
+
             var first = set.Min;
             set.Remove(first);
             //var first1 = set[0];
 
             var set1 = new SortedSet<(int, int)>();
             var min = set1.Min;
+            var max = set1.Max;
 
 
             var set2 = new SortedSet<int> { 2 };

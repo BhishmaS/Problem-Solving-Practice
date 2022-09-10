@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -21,6 +22,10 @@ namespace Learning.DataStructures
             str.Substring(5, 10);
             str.Remove(2, 1);
             str.Replace('a', 'b');
+            str.Select(c => c);
+            str.Where(c => char.IsLetter(c));
+            str.Equals("test");
+
             // string newStr = str.Reverse().ToString(); -- not working ("System.Linq.Enumerable+ReverseIterator`1[System.Char]")
             string.Join("", str.Reverse()); // string
             str.Insert(0, "test");
@@ -38,8 +43,9 @@ namespace Learning.DataStructures
             str.All(s => char.IsUpper(s));
             str.Substring(5, 10).All(s => char.IsUpper(s));
 
-            var split = str.Split(' ');
-            var len = split.Length;
+            // List<string> split = str.Split(' '); Error as it retuns Array (String[])
+            IList<string> split = str.Split(' ');
+            var len = split.Count;
             var intNum = int.Parse("1");
             var n = char.GetNumericValue('1');
 

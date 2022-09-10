@@ -44,7 +44,7 @@
             if (parents[v] == v)
                 return v;
 
-            return this.GetParent(parents, parents[v]);
+            return parents[v] = this.GetParent(parents, parents[v]);
         }
     }
 

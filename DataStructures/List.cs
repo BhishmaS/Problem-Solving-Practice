@@ -29,6 +29,7 @@ namespace Learning.DataStructures
             list.RemoveAt(1);
             list.Reverse(); // returns void
             list.Add(1); // void
+            list.RemoveAt(list.Count - 1);
 
             list.Min();
             list.Min(l => l < 2);
@@ -45,6 +46,7 @@ namespace Learning.DataStructures
                 list[index] = 10;
 
             list.Sort((a, b) => b - a);
+            list.OrderByDescending(a => a);
             list.RemoveAt(list.Count - 1);
 
             foreach (var i in list.Where(i => i == 10))

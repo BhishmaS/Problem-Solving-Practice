@@ -14,6 +14,8 @@ namespace Learning.DataStructures
 
             var normalTuple = (1, 2);
             var i = normalTuple.Item1;
+            Tuple<int, int> t = null;
+            t = new Tuple<int, int>(1, 2);
         }
     }
 }

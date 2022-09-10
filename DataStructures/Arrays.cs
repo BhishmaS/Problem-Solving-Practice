@@ -56,6 +56,8 @@ namespace Learning.DataStructures
             var res = array.Reverse();
             var newArray = array[12..20]; // >=12 && < 20
 
+
+            var newArray1 = array[..20];
             int max = array.Max(a => a);
             int count = array.Count((a) => a == 0);
 
@@ -111,6 +113,7 @@ namespace Learning.DataStructures
             }
 
             Array.Sort(arr);
+            Array.Sort(arr, Comparer<int[]>.Create((x, y) => y[0] - x[0]));
             Array.Sort(arr, (a, b) => Comparer<int>.Create(Compare).Compare(a[0], b[0]));
             Array.Sort(arr, (a, b) => Comparer<int>.Create((x, y) => y - x).Compare(a[0], b[0]));
             Array.Sort(arr, (a, b) => b[1] - a[1]);
