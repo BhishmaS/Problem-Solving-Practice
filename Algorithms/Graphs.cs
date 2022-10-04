@@ -1,4 +1,6 @@
-﻿namespace Learning.Algorithms
+﻿using System.Collections.Generic;
+
+namespace Learning.Algorithms
 {
     public static class GraphsDemo
     {
@@ -50,6 +52,49 @@
 
     public class TopologicalSort
     {
+        public bool CanFinish(int numCourses, int[][] prerequisites)
+        {
+            int[] inDegree = new int[numCourses];
+            var adjList = new List<int>[numCourses];
+            for (int i = 0; i < numCourses; i++)
+            {
+                adjList[i] = new List<int>();
+            }
 
+            foreach (var prereq in prerequisites)
+            {
+                adjList[prereq[1]].Add(prereq[0]);
+
+                inDegree[prereq[0]]++;
+            }
+
+            int coveredCourses = 0;
+            var queue = new Queue<int>();
+            for (int i = 0; i < numCourses; i++)
+            {
+                if (inDegree[i] == 0)
+                {
+                    queue.Enqueue(i);
+                    coveredCourses++;
+                }
+            }
+
+            while (queue.Count > 0)
+            {
+                var currCourse = queue.Dequeue();
+
+                foreach (int course in adjList[currCourse])
+                {
+                    inDegree[course]--;
+                    if (inDegree[course] == 0)
+                    {
+                        queue.Enqueue(course);
+                        coveredCourses++;
+                    }
+                }
+            }
+
+            return coveredCourses == numCourses;
+        }
     }
 }

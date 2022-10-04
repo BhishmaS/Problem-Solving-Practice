@@ -70,6 +70,7 @@ namespace Learning.DataStructures
         static void Print2DArray(int[,] arr)
         {
             Array.Sort(arr);
+            //Array.Fill(arr, -1);
             // Display the array elements.
             for (int i = 0; i < arr.GetLength(0); i++)
             {
@@ -81,6 +82,7 @@ namespace Learning.DataStructures
 
             var copy = arr.Clone() as int[,];
 
+            int[,,] threeD = new int[10, 10, 10];
             //arr.All();
         }
 
@@ -129,7 +131,9 @@ namespace Learning.DataStructures
         static void MainTest()
         {
             // Pass the array as an argument.
-            Print2DArray(new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } });
+            Print2DArray(new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } }); // C#
+
+            bool?[,] temp = new bool?[10, 10];
 
             // Keep the console window open in debug mode.
             System.Console.WriteLine("Press any key to exit.");
