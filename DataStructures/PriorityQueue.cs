@@ -15,6 +15,10 @@ namespace Learning.DataStructures
             var queue3 = new PriorityQueue<(int, int), int>();
             // var queue2 = new PriorityQueue(); -- should contain 2 arguments
 
+            var queue4 = new PriorityQueue<int, (int, int)>(
+                Comparer<(int, int)>.Create((x, y) => x.Item1 < y.Item1 ? -1 : (x.Item1 == y.Item1 ? x.Item2 < y.Item2 ? -1 : 1 : 1))
+            );
+
             var pqueue = new PriorityQueue<int[], double>(
                 Comparer<double>.Create((x, y) => (int)(y - x))
             );

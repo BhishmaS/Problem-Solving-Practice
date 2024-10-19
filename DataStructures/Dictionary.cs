@@ -55,6 +55,9 @@ namespace Learning.DataStructures
 
             }
 
+
+            var dictA = new Dictionary<List<int>, int>();
+            dictA.Add(new List<int>(), 1);
         }
 
         public static IList<IList<int>> VerticalTraversal()

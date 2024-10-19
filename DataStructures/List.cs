@@ -45,7 +45,7 @@ namespace Learning.DataStructures
             if (index != -1)
                 list[index] = 10;
 
-            list.Sort((a, b) => b - a);
+            list.Sort((a, b) => b - a); 
             list.OrderByDescending(a => a);
             list.RemoveAt(list.Count - 1);
 
@@ -54,7 +54,7 @@ namespace Learning.DataStructures
 
             }
 
-            var list2 = new List<int>(list);
+            var list2 = new List<int>(list) { 10 };
             var list3 = new List<int>(3);
 
             var listOfList = new List<List<int>>();
@@ -67,6 +67,9 @@ namespace Learning.DataStructures
             var list4 = new List<(int x, int y)>(3);
             int x = list4[0].x;
             int y = list4[0].y;
+
+            var tasks = new List<List<int>>();
+            tasks.Sort((a, b) => a[0] - b[0]);
         }
 
         private static int Compare(int x, int y)

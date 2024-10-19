@@ -20,6 +20,7 @@ namespace Learning.DataStructures
             str.IndexOf("");
             str.ToLower();
             str.Substring(5, 10);
+            str.Substring(5).All(ch => ch == '*');
             str.Remove(2, 1);
             str.Replace('a', 'b');
             str.Select(c => c);
@@ -88,6 +89,8 @@ namespace Learning.DataStructures
             sb.Remove(1, 1);
             int.Parse(sb.ToString());
             sb.Insert(1, "aa");
+            sb.Replace("a", "b", 2, 1);
+            sb.Remove(sb.Length - 1, 1);
 
             sb.ToString().Reverse().ToString();
 
